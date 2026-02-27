@@ -29,7 +29,7 @@ function playRound(humanChoice, computerChoice){
         humanChoice=prompt("Invalid choice! Please try again:");
     }
     if(humanChoice===computerChoice){
-        console.log(`It's a tie! (Both sides chose ${humanChoice})`);
+        console.log(`It's a tie! (both sides chose ${humanChoice})`);
     }
     else if(
         (humanChoice==="rock" && computerChoice==="scissors") ||
