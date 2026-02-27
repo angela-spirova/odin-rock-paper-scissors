@@ -8,3 +8,23 @@ function getComputerChoice(){
     }
     return "scissors";
 }
+
+function getHumanChoice(){
+    return prompt("Choose rock, paper or scissors:");
+}
+
+paper beats rock 
+rock beats scissors
+scissors beat paper
+
+function playRound(humanChoice, computerChoice){
+    
+}
+
+function playGame(){
+    for(let i=0; i<5; i++){
+        playRound(getHumanChoice(),getComputerChoice());
+    }
+}
+
+playGame();
