@@ -23,9 +23,6 @@ buttons.forEach((button) => {
 });
 
 function playRound(humanChoice, computerChoice){
-    while(!validInput(humanChoice)){
-        humanChoice=prompt("Invalid choice! Please try again:");
-    }
     if(humanChoice===computerChoice){
         console.log(`It's a tie! (both sides chose ${humanChoice})`);
     }
