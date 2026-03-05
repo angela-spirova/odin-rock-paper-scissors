@@ -1,7 +1,10 @@
 let humanScore = 0;
 let computerScore = 0;
 
+let roundNum = 0;
+
 const currentRoundResult = document.getElementById('current-round-result');
+const currentRoundNumber = document.getElementById('round-number');
 
 const humanScoreEl = document.getElementById('human-score');
 const computerScoreEl = document.getElementById('computer-score');
@@ -26,6 +29,7 @@ buttons.forEach((button) => {
 });
 
 function displayCurrentRoundResult(result){
+    currentRoundNumber.textContent = roundNum;
     currentRoundResult.textContent = result;
 }
 
@@ -35,6 +39,7 @@ function displayCurrentScores(){
 }
 
 function playRound(humanChoice, computerChoice){
+    roundNum++;
     if(humanChoice===computerChoice){
         displayCurrentRoundResult(`It's a tie! (both sides chose ${humanChoice})`);
     }
