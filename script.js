@@ -51,10 +51,24 @@ function playRound(humanChoice, computerChoice){
     }
     
     displayCurrentScores();
+
+    if(humanScore === 5 || computerScore === 5){
+        endGame();
+    }
 }
 
-// remove logic that plays 5 rounds
-// create 3 buttons, one for each selection
-// add a div for displaying results and change logs into dom methods
-// display the running score and announce the winner once one player
-// reaches 5 points
+function displayFinalResult(){
+    const winner = document.getElementById('winner');
+    if(humanScore>computerScore){
+        winner.textContent='YOU WON!';
+    }
+    else{
+        winner.textContent='YOU LOST!';
+    }
+}
+
+function endGame(){
+    document.querySelector('div').hidden=true;
+    document.getElementById('final-result').hidden=false;
+    displayFinalResult();
+}

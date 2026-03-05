@@ -8,23 +8,31 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="choices">
-        <button class="choice" id="rock">
-            ROCK
-        </button>
-        <button class="choice" id="paper">
-            PAPER
-        </button>
-        <button class="choice" id="scissors">
-            SCISSORS
-        </button>
-    </div>
     <div>
-        <p id="current-round-result"></p>
-        <ul id="score-list">
-            <li>Your score: <span id="human-score">0</span></li>
-            <li>Computer score: <span id="computer-score">0</span></li>
-        </ul>
+        <h1>Rock, paper, scissors</h1>
+        <p>You'll be playing against the computer. The first one to get 5 points wins!</p>
+        <div>
+            <button class="choice" id="rock">
+                ROCK
+            </button>
+            <button class="choice" id="paper">
+                PAPER
+            </button>
+            <button class="choice" id="scissors">
+                SCISSORS
+            </button>
+        </div>
+        <div>
+            <p id="current-round-result"></p>
+            <ul id="score-list">
+                <li>Your score: <span id="human-score">0</span></li>
+                <li>Computer score: <span id="computer-score">0</span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="final-result" hidden>
+        <h1 id="winner"></h1>
+        <button onclick="location.reload()">Play again?</button>
     </div>
 </body>
 </html>
