@@ -3,6 +3,9 @@ let computerScore = 0;
 
 const currentRoundResult = document.getElementById('current-round-result');
 
+const humanScoreEl = document.getElementById('human-score');
+const computerScoreEl = document.getElementById('computer-score');
+
 function getComputerChoice(){
     let randomNum = Math.random();
     if(randomNum<=1/3){
@@ -26,6 +29,11 @@ function displayCurrentRoundResult(result){
     currentRoundResult.textContent = result;
 }
 
+function displayCurrentScores(){
+    humanScoreEl.textContent = humanScore;
+    computerScoreEl.textContent = computerScore;
+}
+
 function playRound(humanChoice, computerChoice){
     if(humanChoice===computerChoice){
         displayCurrentRoundResult(`It's a tie! (both sides chose ${humanChoice})`);
@@ -41,6 +49,8 @@ function playRound(humanChoice, computerChoice){
         displayCurrentRoundResult(`You lose! (${computerChoice} beats ${humanChoice})`);
         computerScore++;
     }
+    
+    displayCurrentScores();
 }
 
 // remove logic that plays 5 rounds
