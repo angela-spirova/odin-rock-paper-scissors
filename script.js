@@ -43,19 +43,6 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-function playGame(){
-    for(let i=0; i<5; i++){
-        console.log(`Round ${i}:`);
-        playRound(getHumanChoice(),getComputerChoice());
-    }
-    console.log('--- FINAL SCORES ---');
-    console.log(`You: ${humanScore}`);
-    console.log(`Computer: ${computerScore}`);
-}
-
-playGame();
-
-
 // remove logic that plays 5 rounds
 // create 3 buttons, one for each selection
 // add a div for displaying results and change logs into dom methods
