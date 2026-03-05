@@ -1,6 +1,8 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const currentRoundResult = document.getElementById('current-round-result');
+
 function getHumanChoice(){
     return prompt("Rock, paper or scissors?").toLowerCase();
 }
