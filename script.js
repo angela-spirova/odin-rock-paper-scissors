@@ -3,17 +3,6 @@ let computerScore = 0;
 
 const currentRoundResult = document.getElementById('current-round-result');
 
-function getHumanChoice(){
-    return prompt("Rock, paper or scissors?").toLowerCase();
-}
-
-function validInput(humanChoice){
-    if(humanChoice!=="rock" && humanChoice!=="scissors" && humanChoice!=="paper"){
-        return false;
-    }
-    return true;
-}
-
 function getComputerChoice(){
     let randomNum = Math.random();
     if(randomNum<=1/3){
