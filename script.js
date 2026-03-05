@@ -14,6 +14,13 @@ function getComputerChoice(){
     return "scissors";
 }
 
+let buttons = document.querySelectorAll('button.choice');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const humanChoice = button.id;
+        playRound(humanChoice, getComputerChoice());
+    });
+});
 
 function playRound(humanChoice, computerChoice){
     while(!validInput(humanChoice)){
