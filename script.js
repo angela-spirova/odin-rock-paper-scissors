@@ -55,3 +55,10 @@ function playGame(){
 }
 
 playGame();
+
+
+// remove logic that plays 5 rounds
+// create 3 buttons, one for each selection
+// add a div for displaying results and change logs into dom methods
+// display the running score and announce the winner once one player
+// reaches 5 points
